@@ -13,7 +13,7 @@ namespace LoteAutos2017.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703050343504_INICIAL"; }
+            get { return "201703050648012_INICIAL"; }
         }
         
         string IMigrationMetadata.Source

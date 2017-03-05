@@ -10,7 +10,7 @@ namespace LoteAutos2017.Modelo
     class DataModel:DbContext
     {
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Comprador> Compradores { get; set; }
+        public DbSet<ClienteVendedor> ClientesVendedor { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

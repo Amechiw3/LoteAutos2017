@@ -11,8 +11,8 @@ using LoteAutos2017.Comun;
 
 namespace LoteAutos2017.Modelo
 {
-    [Table(name: "Compradores")]
-    public class Comprador
+    [Table(name: "ClientesVendedor")]
+    public class ClienteVendedor
     {
         [Key]
         public int pkComprador { get; set; }
@@ -45,7 +45,7 @@ namespace LoteAutos2017.Modelo
         public String sImagen { get; set; }
 
 
-        public Comprador() {
+        public ClienteVendedor() {
             this.sEstado = "SONORA";
             this.sImagen = ToolImagen.CargarImagenDefault("cliente_silueta.jpg");            
         }

@@ -65,5 +65,7 @@ namespace LoteAutos2017.Comun
             return txtImagen;
         }
 
+        
+
     }
 }

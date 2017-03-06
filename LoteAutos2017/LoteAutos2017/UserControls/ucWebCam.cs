@@ -56,7 +56,8 @@ namespace LoteAutos2017.UserControls
             if (videoSource.IsRunning)
             {
                 videoSource.Stop();
-                this.picImagen.Image = null;
+                //this.picImagen.Image = null;
+                this.picImagen.Image = ImagenBitmap;
                 picImagen.Invalidate();
             }
             else {
@@ -70,7 +71,7 @@ namespace LoteAutos2017.UserControls
         {
             ImagenBitmap = (Bitmap)eventArgs.Frame.Clone();
             ImagenString = ToolImagen.ToBase64String(ImagenBitmap, ImageFormat.Jpeg);
-            picImagen.Image = ImagenBitmap;
+            picImagen.Image = ImagenBitmap;            
         }
 
         public void FinalizarControles() {

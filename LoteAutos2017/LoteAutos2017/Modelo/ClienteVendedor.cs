@@ -47,7 +47,8 @@ namespace LoteAutos2017.Modelo
 
         public ClienteVendedor() {
             this.sEstado = "SONORA";
-            this.sImagen = ToolImagen.CargarImagenDefault("cliente_silueta.jpg");            
+            this.sImagen = ToolImagen.CargarImagenDefault("cliente_silueta.jpg");
+            this.Autos = new List<Auto>();
         }
 
 

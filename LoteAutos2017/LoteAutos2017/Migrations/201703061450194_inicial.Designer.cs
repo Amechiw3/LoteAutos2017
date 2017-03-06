@@ -7,13 +7,13 @@ namespace LoteAutos2017.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class INICIAL : IMigrationMetadata
+    public sealed partial class inicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(INICIAL));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(inicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703060326191_INICIAL"; }
+            get { return "201703061450194_inicial"; }
         }
         
         string IMigrationMetadata.Source

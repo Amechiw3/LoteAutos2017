@@ -18,9 +18,9 @@ namespace LoteAutos2017.Controladores
             try
             {
                 using (var ctx = new DataModel()) {
-                    /*ctx.Entry(nCVendedor).State = EntityState.Added;
-                    ctx.SaveChanges();*/
-                    
+                    //ctx.Entry(nCVendedor).State = EntityState.Added;
+                    ctx.ClientesVendedor.Add(nCVendedor);
+                    ctx.SaveChanges();                    
                 }
 
                 return nCVendedor.pkClientesVendedor;
@@ -31,6 +31,19 @@ namespace LoteAutos2017.Controladores
             }
         }
 
+        public static ClienteVendedor BuscarPorID(int Id) {
+            try
+            {
+                using (var ctx = new DataModel()) {
+                    return ctx.ClientesVendedor.Where(r => r.pkClientesVendedor == Id).FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         public static List<string> getColoniasRegistradas(string valor) {
             List<string> colonias =new List<string>();
@@ -50,7 +63,7 @@ namespace LoteAutos2017.Controladores
             }
         }
 
-        public static List<string> geCiudadesRegistradas(string valor)
+        public static List<string> getCiudadesRegistradas(string valor)
         {
             List<string> ciudades = new List<string>();
             try
@@ -78,7 +91,8 @@ namespace LoteAutos2017.Controladores
             {
                 using (var ctx = new DataModel())
                 {
-                    var clientes = ctx.ClientesVendedor.Where(r => r.sEstado.Contains(valor)).GroupBy(r => r.sEstado).ToList();
+                    var clientes = ctx.ClientesVendedor.Where(
+                        r => r.sEstado.Contains(valor)).GroupBy(r => r.sEstado).ToList();
                     foreach (var item in clientes)
                     {
                         estados.Add(item.Key.ToUpper());
@@ -86,8 +100,9 @@ namespace LoteAutos2017.Controladores
                     return estados;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                int x = 0;
                 throw;
             }
         }

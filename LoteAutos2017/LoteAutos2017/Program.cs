@@ -16,7 +16,7 @@ namespace LoteAutos2017
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRecepcionAutos());
+            Application.Run(new frmCatalogoAutos());
         }
     }
 }

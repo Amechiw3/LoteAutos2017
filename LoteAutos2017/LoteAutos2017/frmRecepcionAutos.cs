@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using LoteAutos2017.Controladores;
+using LoteAutos2017.Modelo;
 
 namespace LoteAutos2017
 {
@@ -34,7 +35,19 @@ namespace LoteAutos2017
             TextBox t = sender as TextBox;
             if (t != null) {
                if (t.Text.Length >= 3) {
-                    String[] arr =ClienteVendedorManager.getColoniasRegistradas(t.Text).ToArray();
+                    String[] arr= { };
+                    switch (t.Tag.ToString()) {
+                        case "COLONIA":
+                            arr = ClienteVendedorManager.getColoniasRegistradas(t.Text).ToArray();
+                            break;
+                        case "CIUDAD":
+                            arr = ClienteVendedorManager.getCiudadesRegistradas(t.Text).ToArray();
+                            break;
+                        case "ESTADO":
+                            arr = ClienteVendedorManager.getEstadoRegistradas(t.Text).ToArray();
+                            break;
+                    }
+                    
                     AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
                     collection.AddRange(arr);
                     t.AutoCompleteCustomSource = collection;
@@ -49,6 +62,41 @@ namespace LoteAutos2017
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            ClienteVendedor nCliente = new ClienteVendedor();
+            nCliente.sNombre = txtNombre.Text;
+            nCliente.sApellidos = txtApellidos.Text;
+            nCliente.sINE = txtINE.Text;
+            nCliente.sTelefono = txtTelefono.Text;
+            nCliente.sCalle = txtCalle.Text;
+            nCliente.sNumero = txtNumero.Text;
+            nCliente.sEntreCalle = txtEntre.Text;
+            nCliente.sColonia = txtColonia.Text;
+            nCliente.sCiudad = txtCiudad.Text;
+            nCliente.sEstado = txtEstado.Text;
+            nCliente.sImagen = ucFotoCliente.ImagenString;
+
+            int pkCliente=ClienteVendedorManager.GuardarNuevoCV(nCliente);
+
+            Auto nAuto = new Auto();
+            nAuto.sFotoPrincipal = ucFotoPrincipal.ImagenString;
+            nAuto.sFotoSecundaria = ucFotoSecundaria.ImagenString;
+            nAuto.sFotoTercearia = ucFotoTercearia.ImagenString;
+
+            nAuto.sMarca = txtMarca.Text;
+            nAuto.sModelo = txtModelo.Text;
+            nAuto.sNumeroSerie = txtNumeroSerie.Text;
+            nAuto.iAnio =Convert.ToInt32( txtAnio.Text);
+            nAuto.sDescripcion = txtComentario.Text;
+
+            AutoManager.GuardarNuevoAuto(nAuto, pkCliente);
+            int x = 0;
+
+
+
         }
     }
 }

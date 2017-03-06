@@ -15,7 +15,7 @@ namespace LoteAutos2017.Modelo
     public class ClienteVendedor
     {
         [Key]
-        public int pkComprador { get; set; }
+        public int pkClientesVendedor { get; set; }
         [Required(ErrorMessage = "Se requiere el Nombre")]
         public String sNombre { get; set; }
 
@@ -49,6 +49,10 @@ namespace LoteAutos2017.Modelo
             this.sEstado = "SONORA";
             this.sImagen = ToolImagen.CargarImagenDefault("cliente_silueta.jpg");            
         }
+
+
+        //RELACIONES
+        public virtual ICollection<Auto> Autos { get; set; }
 
     }
 }

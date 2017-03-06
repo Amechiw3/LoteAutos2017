@@ -10,18 +10,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 using LoteAutos2017.Comun;
 namespace LoteAutos2017.Modelo
 {
+    [Table(name: "Autos")]
     public class Auto
     {
         [Key]
         public int pkAuto { get; set; }
 
+        [Required(ErrorMessage ="Se requiere la Marca")]
         public String sMarca { get; set; }
+        [Required(ErrorMessage = "Se requiere el Modelo")]
         public String sModelo { get; set; }
+        [Required(ErrorMessage = "Se requiere el Año")]
         public int iAnio { get; set; }
+        [Required(ErrorMessage = "El numero de serie no puede quedar vacio")]
         public String sNumeroSerie { get; set; }
         public String sDescripcion { get; set; }
+        [Required(ErrorMessage = "Se requiere la fotografia principal")]
         public String sFotoPrincipal { get; set; }
+        [Required(ErrorMessage = "Se requiere la imagen")]
         public String sFotoSecundaria { get; set; }
+        [Required(ErrorMessage = "Se requiere la imagen")]
         public String sFotoTercearia { get; set; }
 
         public Boolean bStatus { get; set; }
@@ -30,7 +38,8 @@ namespace LoteAutos2017.Modelo
             this.bStatus = true;
             this.sFotoPrincipal = this.sFotoSecundaria= this.sFotoTercearia = ToolImagen.CargarImagenDefault();           
         }
-
+        //RELACIONES
+        public virtual ClienteVendedor clienteVendedor { get; set; }
 
     }
 }

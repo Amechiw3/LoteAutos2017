@@ -13,7 +13,24 @@ namespace LoteAutos2017.Controladores
 {
     class ClienteVendedorManager
     {
-        
+
+        public static int GuardarNuevoCV(ClienteVendedor nCVendedor) {            
+            try
+            {
+                using (var ctx = new DataModel()) {
+                    /*ctx.Entry(nCVendedor).State = EntityState.Added;
+                    ctx.SaveChanges();*/
+                    
+                }
+
+                return nCVendedor.pkClientesVendedor;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         public static List<string> getColoniasRegistradas(string valor) {
             List<string> colonias =new List<string>();

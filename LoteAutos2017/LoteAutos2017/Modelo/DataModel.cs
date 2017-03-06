@@ -10,11 +10,17 @@ namespace LoteAutos2017.Modelo
     class DataModel:DbContext
     {
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<ClienteVendedor> ClientesVendedor { get; set; }        
+        public DbSet<ClienteVendedor> ClientesVendedor { get; set; } 
+        public DbSet<Auto> Autos { get; set; }       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
+        /// <summary>
+        /// CONSTRUCTOR DE LA CLASE Y SE LE INDICA EL NOMBRE DE LA CADENA DE 
+        /// CONCECCION
+        /// </summary>
+        public DataModel():base("DataModel") { }
     }
 }

@@ -60,8 +60,12 @@ namespace LoteAutos2017.Comun
         public static string CargarImagenDefault(String imgDEfault= "coche_silueta.jpg") {
             string txtImagen = "";
             String path = Path.Combine(Application.StartupPath,String.Format("Comun\\{0}",imgDEfault));
-            Bitmap imagen = new System.Drawing.Bitmap(path);
-            txtImagen = ToBase64String(imagen, ImageFormat.Jpeg);
+            if (File.Exists(path))
+            {
+                Bitmap imagen = new System.Drawing.Bitmap(path);
+                txtImagen = ToBase64String(imagen, ImageFormat.Jpeg);
+            }
+            
             return txtImagen;
         }
 

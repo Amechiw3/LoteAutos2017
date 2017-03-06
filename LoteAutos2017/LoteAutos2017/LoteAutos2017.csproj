@@ -77,6 +77,11 @@
     <Compile Include="frmRecepcionAutos.Designer.cs">
       <DependentUpon>frmRecepcionAutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703060326191_INICIAL.cs" />
+    <Compile Include="Migrations\201703060326191_INICIAL.Designer.cs">
+      <DependentUpon>201703060326191_INICIAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\ClienteVendedor.cs" />
@@ -93,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="frmRecepcionAutos.resx">
       <DependentUpon>frmRecepcionAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703060326191_INICIAL.resx">
+      <DependentUpon>201703060326191_INICIAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

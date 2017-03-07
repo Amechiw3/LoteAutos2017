@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Comun\ToolImagen.cs" />
     <Compile Include="Controladores\AutoManager.cs" />
+    <Compile Include="Controladores\ClienteManager.cs" />
     <Compile Include="Controladores\ClienteVendedorManager.cs" />
     <Compile Include="frmCatalogoAutos.cs">
       <SubType>Form</SubType>
@@ -84,14 +85,24 @@
     <Compile Include="frmRecepcionAutos.Designer.cs">
       <DependentUpon>frmRecepcionAutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentaAuto.Designer.cs">
+      <DependentUpon>frmVentaAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201703061450194_inicial.cs" />
     <Compile Include="Migrations\201703061450194_inicial.Designer.cs">
       <DependentUpon>201703061450194_inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703071601232_ADD-COSTO_PRECIO_AUTO.cs" />
+    <Compile Include="Migrations\201703071601232_ADD-COSTO_PRECIO_AUTO.Designer.cs">
+      <DependentUpon>201703071601232_ADD-COSTO_PRECIO_AUTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Modelo\Cliente.cs" />
-    <Compile Include="Modelo\ClienteVendedor.cs" />
+    <Compile Include="ClienteVendedor.cs" />
     <Compile Include="Modelo\Colonia.cs" />
     <Compile Include="Modelo\Comprador.cs" />
     <Compile Include="Modelo\DataModel.cs" />
@@ -115,8 +126,14 @@
     <EmbeddedResource Include="frmRecepcionAutos.resx">
       <DependentUpon>frmRecepcionAutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVentaAuto.resx">
+      <DependentUpon>frmVentaAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703061450194_inicial.resx">
       <DependentUpon>201703061450194_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703071601232_ADD-COSTO_PRECIO_AUTO.resx">
+      <DependentUpon>201703071601232_ADD-COSTO_PRECIO_AUTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

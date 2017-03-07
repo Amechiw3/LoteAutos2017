@@ -32,11 +32,19 @@ namespace LoteAutos2017.Modelo
         [Required(ErrorMessage = "Se requiere la imagen")]
         public String sFotoTercearia { get; set; }
 
+        [Required(ErrorMessage ="Se require el costro de la unidad")]
+        public double Costo { get; set; }
+
+        [Required(ErrorMessage = "Se require el Precio de Venta")]
+        public double PrecioVenta { get; set; }
+
         public Boolean bStatus { get; set; }
 
         public Auto(){
             this.bStatus = true;
-            this.sFotoPrincipal = this.sFotoSecundaria= this.sFotoTercearia = ToolImagen.CargarImagenDefault();           
+            this.sFotoPrincipal = this.sFotoSecundaria= this.sFotoTercearia = ToolImagen.CargarImagenDefault();
+            this.Costo = 0;
+            this.PrecioVenta = 0;
         }
         //RELACIONES
         public virtual ClienteVendedor clienteVendedor { get; set; }

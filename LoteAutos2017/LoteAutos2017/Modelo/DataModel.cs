@@ -11,7 +11,8 @@ namespace LoteAutos2017.Modelo
     {
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<ClienteVendedor> ClientesVendedor { get; set; } 
-        public DbSet<Auto> Autos { get; set; }       
+        public DbSet<Auto> Autos { get; set; }
+        public DbSet<Venta> Ventas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

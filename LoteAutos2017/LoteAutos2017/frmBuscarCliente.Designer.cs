@@ -53,6 +53,7 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(492, 24);
             this.txtApellidos.TabIndex = 1;
+            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             // 
             // lblRegistros
             // 
@@ -75,6 +76,8 @@
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.Size = new System.Drawing.Size(494, 226);
             this.grdDatos.TabIndex = 3;
+            this.grdDatos.DataSourceChanged += new System.EventHandler(this.grdDatos_DataSourceChanged);
+            this.grdDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellDoubleClick);
             // 
             // Column1
             // 

@@ -37,25 +37,25 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.picAuto = new System.Windows.Forms.PictureBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtAnio = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNoSerie = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtNoSerie = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.picAuto = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -145,6 +145,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "COMPRADOR:";
             // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Location = new System.Drawing.Point(630, 12);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(56, 34);
+            this.btnBuscarCliente.TabIndex = 8;
+            this.btnBuscarCliente.Text = "?";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtDescripcion);
@@ -165,72 +175,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "UNIDAD A COMPRAR:";
             // 
-            // picAuto
+            // txtDescripcion
             // 
-            this.picAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAuto.Location = new System.Drawing.Point(15, 57);
-            this.picAuto.Name = "picAuto";
-            this.picAuto.Size = new System.Drawing.Size(146, 105);
-            this.picAuto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAuto.TabIndex = 0;
-            this.picAuto.TabStop = false;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDescripcion.Location = new System.Drawing.Point(167, 105);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(522, 57);
+            this.txtDescripcion.TabIndex = 15;
             // 
-            // txtMarca
+            // label9
             // 
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMarca.Enabled = false;
-            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtMarca.Location = new System.Drawing.Point(167, 58);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(105, 17);
-            this.txtMarca.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(164, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 18);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Marca";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtModelo.Enabled = false;
-            this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtModelo.Location = new System.Drawing.Point(278, 58);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(105, 17);
-            this.txtModelo.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(275, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 18);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Modelo";
-            // 
-            // txtAnio
-            // 
-            this.txtAnio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAnio.Enabled = false;
-            this.txtAnio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtAnio.Location = new System.Drawing.Point(389, 58);
-            this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(105, 17);
-            this.txtAnio.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(386, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 18);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Año";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(164, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 18);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Descripcion:";
             // 
             // txtNoSerie
             // 
@@ -251,25 +214,72 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "No. Serie";
             // 
-            // txtDescripcion
+            // txtAnio
             // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(167, 105);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(522, 57);
-            this.txtDescripcion.TabIndex = 15;
+            this.txtAnio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAnio.Enabled = false;
+            this.txtAnio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtAnio.Location = new System.Drawing.Point(389, 58);
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(105, 17);
+            this.txtAnio.TabIndex = 11;
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(164, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 18);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Descripcion:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(386, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 18);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Año";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtModelo.Enabled = false;
+            this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtModelo.Location = new System.Drawing.Point(278, 58);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(105, 17);
+            this.txtModelo.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(275, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 18);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Modelo";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMarca.Enabled = false;
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMarca.Location = new System.Drawing.Point(167, 58);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(105, 17);
+            this.txtMarca.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(164, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 18);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Marca";
+            // 
+            // picAuto
+            // 
+            this.picAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picAuto.Location = new System.Drawing.Point(15, 57);
+            this.picAuto.Name = "picAuto";
+            this.picAuto.Size = new System.Drawing.Size(146, 105);
+            this.picAuto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAuto.TabIndex = 0;
+            this.picAuto.TabStop = false;
             // 
             // textBox1
             // 
@@ -322,15 +332,6 @@
             this.label12.Size = new System.Drawing.Size(45, 18);
             this.label12.TabIndex = 14;
             this.label12.Text = "Total:";
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(630, 12);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(56, 34);
-            this.btnBuscarCliente.TabIndex = 8;
-            this.btnBuscarCliente.Text = "?";
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 

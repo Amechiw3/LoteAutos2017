@@ -66,7 +66,6 @@
             this.ucFotoSecundaria = new LoteAutos2017.UserControls.ucWebCam();
             this.ucFotoPrincipal = new LoteAutos2017.UserControls.ucWebCam();
             this.ucFotoCliente = new LoteAutos2017.UserControls.ucWebCam();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -416,14 +415,6 @@
             this.ucFotoCliente.Size = new System.Drawing.Size(267, 230);
             this.ucFotoCliente.TabIndex = 1;
             // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(288, 291);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 38;
-            // 
             // frmRecepcionAutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,7 +422,6 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(10, 0);
             this.ClientSize = new System.Drawing.Size(804, 585);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label17);
@@ -519,6 +509,5 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

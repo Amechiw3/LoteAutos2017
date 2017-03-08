@@ -22,5 +22,27 @@ namespace LoteAutos2017
             this.grdDatos.AutoGenerateColumns = false;
             this.vPadre = Ventana;
         }
+
+        private void txtApellidos_TextChanged(object sender, EventArgs e)
+        {
+            this.grdDatos.DataSource = ClienteManager
+                    .BuscarPorApellidos(txtApellidos.Text);
+
+        }
+
+        private void grdDatos_DataSourceChanged(object sender, EventArgs e)
+        {
+            lblRegistros.Text = "Registros: " 
+                + grdDatos.Rows.Count;
+        }
+
+        private void grdDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String idCliente = grdDatos.Rows[e.RowIndex]
+                .Cells[0].Value.ToString();
+
+            vPadre.MostrarDatosCliente(Convert.ToInt32( idCliente));
+            this.Close();
+        }
     }
 }

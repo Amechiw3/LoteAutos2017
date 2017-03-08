@@ -26,7 +26,7 @@ namespace LoteAutos2017
                 txtPassword.Text);
             if (uHelper.esValido)
             {
-                //TODO: guardar el objeto a la ventana principal
+                frmMain.uHelper = uHelper;
                 this.Close();
             }
             else {
@@ -35,6 +35,11 @@ namespace LoteAutos2017
                 txtUsuario.Focus();
             }
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

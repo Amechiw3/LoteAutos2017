@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using LoteAutos2017.Modelo;
 namespace LoteAutos2017.Controladores.Helpers
 {
-    class UsuarioHelper
+    public class UsuarioHelper
     {
         public Usuario usuario { get; set; }
         public Boolean esValido { get; set; }
@@ -26,6 +26,7 @@ namespace LoteAutos2017.Controladores.Helpers
         public UsuarioHelper() {
             this.usuario = null;
             this.esValido = false;
+            this.sMensaje = "Datos incorrectos";
         }
     }
 }

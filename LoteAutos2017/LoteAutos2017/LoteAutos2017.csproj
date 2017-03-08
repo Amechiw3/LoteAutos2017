@@ -69,10 +69,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comun\LoginTool.cs" />
     <Compile Include="Comun\ToolImagen.cs" />
     <Compile Include="Controladores\AutoManager.cs" />
     <Compile Include="Controladores\ClienteManager.cs" />
     <Compile Include="Controladores\ClienteVendedorManager.cs" />
+    <Compile Include="Controladores\Helpers\UsuarioHelper.cs" />
+    <Compile Include="Controladores\UsuarioManeger.cs" />
     <Compile Include="Controladores\VentaManager.cs" />
     <Compile Include="frmBuscarCliente.cs">
       <SubType>Form</SubType>
@@ -85,6 +88,12 @@
     </Compile>
     <Compile Include="frmCatalogoAutos.Designer.cs">
       <DependentUpon>frmCatalogoAutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogincs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogincs.Designer.cs">
+      <DependentUpon>frmLogincs.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRecepcionAutos.cs">
       <SubType>Form</SubType>
@@ -114,13 +123,20 @@
     <Compile Include="Migrations\201703081434215_ADD-REALACION-VENTA-CLIENTE.Designer.cs">
       <DependentUpon>201703081434215_ADD-REALACION-VENTA-CLIENTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.cs" />
+    <Compile Include="Migrations\201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.Designer.cs">
+      <DependentUpon>201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Modelo\Cliente.cs" />
-    <Compile Include="ClienteVendedor.cs" />
+    <Compile Include="Modelo\ClienteVendedor.cs" />
     <Compile Include="Modelo\Colonia.cs" />
     <Compile Include="Modelo\Comprador.cs" />
     <Compile Include="Modelo\DataModel.cs" />
+    <Compile Include="Modelo\Permiso.cs" />
+    <Compile Include="Modelo\PermisoNegado.cs" />
+    <Compile Include="Modelo\Rol.cs" />
     <Compile Include="Modelo\Venta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,11 +152,15 @@
     <Compile Include="UserControls\ucWebCam.Designer.cs">
       <DependentUpon>ucWebCam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Usuario.cs" />
     <EmbeddedResource Include="frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoAutos.resx">
       <DependentUpon>frmCatalogoAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogincs.resx">
+      <DependentUpon>frmLogincs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecepcionAutos.resx">
       <DependentUpon>frmRecepcionAutos.cs</DependentUpon>
@@ -160,6 +180,9 @@
     <EmbeddedResource Include="Migrations\201703081434215_ADD-REALACION-VENTA-CLIENTE.resx">
       <DependentUpon>201703081434215_ADD-REALACION-VENTA-CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.resx">
+      <DependentUpon>201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControls\ucFichaAuto.resx">
       <DependentUpon>ucFichaAuto.cs</DependentUpon>
@@ -192,6 +216,7 @@
   <ItemGroup>
     <Content Include="Comun\coche_silueta.jpg" />
     <Content Include="Comun\cliente_silueta.jpg" />
+    <None Include="Resources\image_20170130_125258.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

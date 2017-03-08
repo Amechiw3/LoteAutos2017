@@ -14,6 +14,14 @@ namespace LoteAutos2017.Modelo
         public DbSet<Auto> Autos { get; set; }
         public DbSet<Venta> Ventas { get; set; }
 
+        public DbSet<Permiso> Permisos { get; set; }
+        public DbSet<Rol> Roles { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<PermisoNegado> PermisosNegados { get; set; }
+
+
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

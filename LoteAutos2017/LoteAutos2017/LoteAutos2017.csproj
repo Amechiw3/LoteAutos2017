@@ -74,6 +74,12 @@
     <Compile Include="Controladores\ClienteManager.cs" />
     <Compile Include="Controladores\ClienteVendedorManager.cs" />
     <Compile Include="Controladores\VentaManager.cs" />
+    <Compile Include="frmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCliente.Designer.cs">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCatalogoAutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,10 @@
     <Compile Include="Migrations\201703071640454_ADD-TABLA-VENTAS.Designer.cs">
       <DependentUpon>201703071640454_ADD-TABLA-VENTAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703081434215_ADD-REALACION-VENTA-CLIENTE.cs" />
+    <Compile Include="Migrations\201703081434215_ADD-REALACION-VENTA-CLIENTE.Designer.cs">
+      <DependentUpon>201703081434215_ADD-REALACION-VENTA-CLIENTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Modelo\Cliente.cs" />
@@ -126,6 +136,9 @@
     <Compile Include="UserControls\ucWebCam.Designer.cs">
       <DependentUpon>ucWebCam.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoAutos.resx">
       <DependentUpon>frmCatalogoAutos.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703071640454_ADD-TABLA-VENTAS.resx">
       <DependentUpon>201703071640454_ADD-TABLA-VENTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081434215_ADD-REALACION-VENTA-CLIENTE.resx">
+      <DependentUpon>201703081434215_ADD-REALACION-VENTA-CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

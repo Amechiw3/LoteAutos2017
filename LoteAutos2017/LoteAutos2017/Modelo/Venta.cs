@@ -15,13 +15,15 @@ namespace LoteAutos2017.Modelo
         [Key]
         public int pkVenta { get; set; }
         public DateTime dFechaVenta { get; set; }        
-        public virtual Cliente cliente { get; set; }
+        
         [Required(ErrorMessage = "Dene indicar la Unidad")]
         public int fkAuto { get; set; }
         [Required(ErrorMessage ="Debe indicar el Total de la Venta")]
         public double PrecioVenta { get; set; }
         public Boolean bStatus { get; set; }        
         public CONCEPTO TipoMovimiento { get; set; }
+
+        public virtual Cliente cliente { get; set; }
 
         public Venta() {
             this.bStatus = true;

@@ -10,6 +10,7 @@ namespace LoteAutos2017.Controladores
 {
     class VentaManager
     {
+        //TODO: SOLICITAR EL USUARIO QUIEN REALIZA LA VENTA
         public static int RegistrarVenta(Auto aVender,Cliente Comprador) {
             try
             {

@@ -26,6 +26,8 @@ namespace LoteAutos2017.Modelo
 
         public Boolean bStatus { get; set; }
 
+        public ICollection<Venta> Compras { get; set; } 
+
         public Cliente() {
             this.bStatus = true;
         }

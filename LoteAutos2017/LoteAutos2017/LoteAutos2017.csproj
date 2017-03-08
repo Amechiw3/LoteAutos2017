@@ -127,7 +127,12 @@
     <Compile Include="Migrations\201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.Designer.cs">
       <DependentUpon>201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703081905362_ADD-TABLA_ACCESOS.cs" />
+    <Compile Include="Migrations\201703081905362_ADD-TABLA_ACCESOS.Designer.cs">
+      <DependentUpon>201703081905362_ADD-TABLA_ACCESOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modelo\Acceso.cs" />
     <Compile Include="Modelo\Auto.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\ClienteVendedor.cs" />
@@ -182,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.resx">
       <DependentUpon>201703081819332_ADD-TABLAS_USUARIO_PERMISOS_ROLES_PERMISOSNEGADOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081905362_ADD-TABLA_ACCESOS.resx">
+      <DependentUpon>201703081905362_ADD-TABLA_ACCESOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

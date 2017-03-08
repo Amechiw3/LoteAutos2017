@@ -19,6 +19,8 @@ namespace LoteAutos2017.Modelo
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<PermisoNegado> PermisosNegados { get; set; }
 
+        public DbSet<Acceso> Accesos { get; set; }
+
 
 
 

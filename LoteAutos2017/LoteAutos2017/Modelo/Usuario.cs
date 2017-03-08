@@ -20,6 +20,7 @@ namespace LoteAutos2017.Modelo
         public Boolean bStatus { get; set; }
 
         public virtual Rol rol { get; set; }
+        public ICollection<Acceso> Accesos { get; set; }
 
         /// <summary>
         /// POR DEFATUL LA CLAVE PARA TODOS LOS USUARIOS ES 123123

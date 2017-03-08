@@ -10,7 +10,7 @@ namespace LoteAutos2017.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
+            //SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
         }
 
         protected override void Seed(LoteAutos2017.Modelo.DataModel context)

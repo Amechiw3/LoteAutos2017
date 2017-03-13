@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using LoteAutos2017.Controladores.Helpers;
 using LoteAutos2017.Controladores;
+using LoteAutos2017.Modelo;
 namespace LoteAutos2017
 {
     public partial class frmLogincs : Form
@@ -25,9 +26,10 @@ namespace LoteAutos2017
             uHelper = UsuarioManeger.Autentificar(txtUsuario.Text,
                 txtPassword.Text);
             if (uHelper.esValido)
-            {
+            {            
                 frmMain.uHelper = uHelper;
                 this.Close();
+
             }
             else {
                 MessageBox.Show(uHelper.sMensaje,"Autentificacion",MessageBoxButtons.OK,MessageBoxIcon.Error);

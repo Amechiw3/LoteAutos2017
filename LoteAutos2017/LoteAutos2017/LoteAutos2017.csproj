@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Comun\LoginTool.cs" />
     <Compile Include="Comun\ToolImagen.cs" />
+    <Compile Include="Controladores\AccesoManager.cs" />
     <Compile Include="Controladores\AutoManager.cs" />
     <Compile Include="Controladores\ClienteManager.cs" />
     <Compile Include="Controladores\ClienteVendedorManager.cs" />

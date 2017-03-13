@@ -20,6 +20,9 @@ namespace LoteAutos2017.Controladores
                 {
                     uHelper.usuario = user;
                     uHelper.esValido = true;
+                    Acceso nAcceso = new Acceso();
+                    nAcceso.usuario = user;
+                    AccesoManager.RegistrarAcceso(nAcceso); 
                 }
                 else {
                     uHelper.sMensaje = "Datos Incorrectos";

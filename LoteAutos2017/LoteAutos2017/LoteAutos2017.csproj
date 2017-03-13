@@ -234,6 +234,9 @@
   <ItemGroup>
     <Content Include="Comun\coche_silueta.jpg" />
     <Content Include="Comun\cliente_silueta.jpg" />
+    <None Include="Resources\1489439679_documents-01.png" />
+    <None Include="Resources\1489439587_solid-travel-tourism-car.png" />
+    <None Include="Resources\1489439492_08_Sales.png" />
     <None Include="Resources\image_20170130_125258.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

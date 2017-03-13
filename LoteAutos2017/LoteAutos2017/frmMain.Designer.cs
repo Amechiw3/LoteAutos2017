@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tooVenta = new System.Windows.Forms.ToolStripButton();
             this.tooIngreso = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,18 +41,42 @@
             this.autosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.porClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 71);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 71);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(64, 64);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tooVenta,
+            this.tooIngreso,
+            this.toolStripSeparator1,
+            this.toolStripDropDownButton1,
+            this.toolStripSeparator2,
+            this.toolStripDropDownButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(902, 71);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // tooVenta
             // 
             this.tooVenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tooVenta.Image = ((System.Drawing.Image)(resources.GetObject("tooVenta.Image")));
+            this.tooVenta.Image = global::LoteAutos2017.Properties.Resources._1489439492_08_Sales;
             this.tooVenta.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.tooVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tooVenta.Name = "tooVenta";
@@ -63,17 +89,12 @@
             // tooIngreso
             // 
             this.tooIngreso.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tooIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tooIngreso.Image")));
+            this.tooIngreso.Image = global::LoteAutos2017.Properties.Resources._1489439587_solid_travel_tourism_car;
             this.tooIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tooIngreso.Name = "tooIngreso";
             this.tooIngreso.Size = new System.Drawing.Size(68, 68);
             this.tooIngreso.Text = "Recepción";
             this.tooIngreso.Click += new System.EventHandler(this.tooIngreso_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 71);
             // 
             // toolStripDropDownButton1
             // 
@@ -81,7 +102,7 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasToolStripMenuItem,
             this.autosToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.Image = global::LoteAutos2017.Properties.Resources._1489439679_documents_01;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(77, 68);
@@ -93,7 +114,7 @@
             this.generalToolStripMenuItem,
             this.porVendedorToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // generalToolStripMenuItem
@@ -114,7 +135,7 @@
             this.generalToolStripMenuItem1,
             this.porClienteToolStripMenuItem});
             this.autosToolStripMenuItem.Name = "autosToolStripMenuItem";
-            this.autosToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.autosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.autosToolStripMenuItem.Text = "Autos";
             // 
             // generalToolStripMenuItem1
@@ -128,11 +149,6 @@
             this.porClienteToolStripMenuItem.Name = "porClienteToolStripMenuItem";
             this.porClienteToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.porClienteToolStripMenuItem.Text = "Por Cliente";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 71);
             // 
             // toolStripDropDownButton2
             // 
@@ -156,24 +172,8 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(64, 64);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tooVenta,
-            this.tooIngreso,
-            this.toolStripSeparator1,
-            this.toolStripDropDownButton1,
-            this.toolStripSeparator2,
-            this.toolStripDropDownButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(902, 71);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
             // 
             // frmMain
             // 
@@ -182,7 +182,6 @@
             this.ClientSize = new System.Drawing.Size(902, 86);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lote de Autos";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.toolStrip1.ResumeLayout(false);

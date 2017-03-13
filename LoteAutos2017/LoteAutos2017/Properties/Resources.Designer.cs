@@ -63,6 +63,36 @@ namespace LoteAutos2017.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1489439492_08_Sales {
+            get {
+                object obj = ResourceManager.GetObject("1489439492_08_Sales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1489439587_solid_travel_tourism_car {
+            get {
+                object obj = ResourceManager.GetObject("1489439587_solid-travel-tourism-car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1489439679_documents_01 {
+            get {
+                object obj = ResourceManager.GetObject("1489439679_documents-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_20170130_125258 {
             get {
                 object obj = ResourceManager.GetObject("image_20170130_125258", resourceCulture);

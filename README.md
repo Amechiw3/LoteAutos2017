@@ -9,3 +9,5 @@ http://www.aforgenet.com/framework/downloads.html
 el proyecto requiere la referenca a las librerias:
   AForge.Video.DirectShow;
   LoteAutos2017.Comun;
+  
+  Lebrerias y mas (AFORGE)
